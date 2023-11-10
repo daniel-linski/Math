@@ -1,4 +1,4 @@
-import inp_01
+import dict_05
 
 # August 01, 2023 math_01
 # August 03, 2023 math_02

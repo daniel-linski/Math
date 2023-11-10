@@ -1,25 +1,26 @@
-import random
+from random import randrange
 from collections import Counter
+from pprint import pprint
 
-lst_1 = []
-lst_2 = []
-z = 0
+lst = []
 for x in range(1,21):
-  x = random.randrange(1,11)
-  lst_1.append(x)
+  x = randrange(1,11)
+  lst.append(x)
 
-print(lst_1)
-lst_2 = lst_1
-dict = {}
+print(lst)
 print("")
-dict_1 = Counter(lst_1)
-for x in lst_1:
-  #lst_2[z] = (z,dict_1[x])
-  #dict[z] = dict_1[x]
-  z += 1
 
-dict = {k: v for k, v in lst_2}
-print(dict)
+dict_count = Counter(lst)
+print(dict_count) 
+
+#z = 0
+#for val in lst:
+dict = {}
+for ind, val in enumerate(lst):
+  dict[ ind ] = dict_count[ val ]
+  #z += 1
+
+pprint(dict)
 
 # generate a list $lst, containing 20 members, each member a random INT, from 1 to 10; 
 # print this list 
