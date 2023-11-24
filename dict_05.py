@@ -1,4 +1,4 @@
-
+import pprint
 # there is a $dict with data on 3 cars 
 # print data from $dict in 2 formats:
 
@@ -33,3 +33,22 @@ dict = {
     "engine": "3.5 liter",
   },
 }
+pprint.pprint(dict)
+for k,v in dict.items():
+  s = ""
+  s += k + "\n"
+  for k2,v2 in v.items():
+    s += str(k2) + ": " + str(v2) + ", "
+  print(s.removesuffix(", "))
+  print("")
+
+for k,v in dict.items():
+  s = ""
+  for k2,v2 in v.items():
+    if k2 == "year":
+      print(v2)
+    else:
+      s += str(k2) + ": " + str(v2) + "\n"
+  print("car brand: " + str(k))
+  print(s.removesuffix(", "))
+  print("")
